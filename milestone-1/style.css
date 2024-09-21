@@ -90,12 +90,18 @@ button:hover {
 }
 
 /* Responsive Design */
+
+
 @media (max-width: 768px) {
-    .Resume-conatiner {
+    .Resume-container {
         flex-direction: column;
     }
 
     .left-section, .right-section {
-        width: 100%;
+        flex-basis: 100%; /* Full width on small screens */
+    }
+
+    .proflie-picture {
+        margin: 20px auto; /* Center the image */
     }
 }
