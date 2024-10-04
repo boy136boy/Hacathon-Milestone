@@ -7,32 +7,35 @@ body {
     color: #333;
 }
 
-.Resume-conatiner {
+.Resume-container {
     display: flex;
     flex-direction: row;
     margin: 20px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
 .left-section {
     width: 30%;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green */
     color: white;
     padding: 20px;
+    text-align: center;
 }
 
-.proflie-picture {
-    width: 50%;
-    margin-top: 50px;
+.profile-picture {
+    width: 100px; /* Adjusted for better mobile view */
+    height: 100px; /* Adjusted for better mobile view */
     border: 3px solid #fff;
-    margin-bottom: 30px;
+    border-radius: 50%; 
+    margin: 20px auto; 
+    object-fit: cover; 
 }
 
 h3 {
-    color: #FFD700;
+    color: #FFD700; /* Gold */
     margin-top: 0;
 }
 
@@ -40,17 +43,18 @@ p {
     line-height: 1.6;
 }
 
-#objective p, #certifition p {
-    color: #e0e0e0;
+#objective p, #certification p {
+    color: #e0e0e0; /* Light Gray */
 }
 
 .right-section {
     width: 70%;
     padding: 20px;
+    background-color: #f9f9f9; /* Light Gray for contrast */
 }
 
 h1 {
-    color: #4CAF50;
+    color: #FF5733; /* Bright Red */
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 10px;
 }
@@ -60,7 +64,7 @@ section {
 }
 
 a {
-    color: #2196F3;
+    color: #2196F3; /* Blue */
     text-decoration: none;
 }
 
@@ -74,34 +78,62 @@ ul {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #FF5733; /* Bright Red */
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px; /* Rounded corners */
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #C70039; /* Darker Red */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Responsive Design */
-
-
 @media (max-width: 768px) {
     .Resume-container {
-        flex-direction: column;
+        flex-direction: column; 
+        margin: 10px; 
+        padding: 10px; /* Add padding for mobile */
     }
 
-    .left-section, .right-section {
-        flex-basis: 100%; /* Full width on small screens */
+    .left-section {
+        width: 100%; /* Full width on mobile */
+        padding: 15px; /* Adjust padding */
     }
 
-    .proflie-picture {
-        margin: 20px auto; /* Center the image */
+    .right-section {
+        width: 100%; /* Full width on mobile */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .profile-picture {
+        width: 120px; 
+        height: 120px; 
+        margin: 20px auto; 
+    }
+
+    h1 {
+        font-size: 1.5em; 
+    }
+
+    h3 {
+        font-size: 1.2em; 
+    }
+
+    p {
+        font-size: 0.95em; /* Adjust for better readability */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on mobile */
+        padding: 15px; /* Increase padding for better touch target */
+        font-size: 18px; /* Slightly larger text */
     }
 }
